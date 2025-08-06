@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const content = document.querySelector(".content");
   const mainFooter = document.querySelector(".main-footer");
   const contactButton = document.querySelector(".contact");
-  const logo = document.querySelector(".logo");
+  const whoWeAreSection = document.querySelector(".who-we-are-section");
+  const gridContainer = document.querySelector(".grid-container");
   const logoChars = document.querySelectorAll("#logo-text .char");
 
   // scroll-wrap animation
@@ -193,6 +194,8 @@ document.addEventListener("DOMContentLoaded", function () {
           // Show content after text reveal
           setTimeout(() => {
             content.style.opacity = "1";
+            whoWeAreSection.style.opacity = "1";
+            gridContainer.style.opacity = "1";
             preloaderDone = true;
 
             // Get references

@@ -60,6 +60,7 @@ body {
 
 /* 12-column grid system */
 .grid-container {
+  opacity: 0;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -617,6 +618,7 @@ p {
 
 /* who we are */
 .who-we-are-section {
+  opacity: 0;
   height: 100vh;
   background: #0e041b;
   color: white;
