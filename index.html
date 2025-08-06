@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>[demo-01-050825] real x website</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- partial:index.partial.html -->
+  <!-- Fixed Footer - initially hidden -->
+  <div class="main-footer">
+    <div class="navbar">
+      <a href="#">works</a>
+      <a href="#">about us</a>
+      <a href="#">contact us</a>
+      <a href="#">blog</a>
+    </div>
+    <div class="contact">
+      <button class="contact-button">Contact Us</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="progress-bar">
+      <p>loading</p>
+      <p>[<span id="counter">0</span>]</p>
+    </div>
+
+    <!-- Modified progress line - now 2px height with green background -->
+    <div class="progress-line"></div>
+
+    <div class="video-container">
+      <video autoplay loop muted playsinline id="hero-video">
+        <source src="https://cdn.pixabay.com/video/2019/07/20/25380-350507864_large.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="header">
+      <h1><span class="s-span">Built for <span style="color: #ff654f">real</span> engagement</span></h1>
+      <h1><span class="s-span">Designed for <span style="color: #72adbb">X</span>perience</span></h1>
+    </div>
+
+    <div class="coordinates">
+      <p><span>creative</span></p>
+      <p><span>innovation</span></p>
+    </div>
+  </div>
+
+  <div class="logo" id="logo">
+    <h1 id="logo-text" style="opacity:0;">REAL X</h1>
+    <img src="../images/NPN-Favicon.png" alt="Icon" id="logo-icon" style="display: none; width: 32px; height: 32px;" />
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    
+
+
+    <div class="grid-container">
+      <!-- Feature Article -->
+      <div class="feature-article">
+        <h2 class="feature-title">Some Title Here</h2>
+      </div>
+
+      <div class="feature-content">
+        <div class="feature-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+          <div class="feature-meta">
+            <div class="meta-item">
+              <span class="meta-label">Label</span>
+              <span class="meta-value">Some Value</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Label</span>
+              <span class="meta-value">Some Value</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Label</span>
+              <span class="meta-value">Some Value</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-content">
+          <h3 class="related-title">Some Title Here</h3>
+          <ul class="related-list">
+            <li class="related-item">
+              <a href="#" class="related-link">Some Link Here</a>
+            </li>
+            <li class="related-item">
+              <a href="#" class="related-link">Some Link Here</a>
+            </li>
+            <li class="related-item">
+              <a href="#" class="related-link">Some Link Here</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <div class="gallery">
+        <h3 class="gallery-title">Some Title Here</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/446d4ba4-e177-49dd-aaf9-4d7a2dbf0541.jpeg" alt="Nebula contemplation">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/5a47ce51-a2f9-443f-af27-0a5332aaa1e2.jpeg" alt="Observatory at night">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/028386a1-0da6-4759-86b5-8cd8cfad3f0f.jpeg" alt="Astronaut perspective">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/78d49539-0853-4495-817b-1482fdfd83c7.jpeg" alt="Space station window">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Content Blocks -->
+      <div class="additional-content">
+        <div class="content-block">
+          <h3 class="content-title">Some Title Here</h3>
+          <p class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+          <p class="content-text mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3 class="content-title">Some Title Here</h3>
+          <p class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+          <p class="content-text mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="norm-container">
+      <h2 class="feature-title">Works that brought us here</h2>
+      <p class="content-text">The projects that shaped us and still speak for us</p>
+    </div>
+    
+    <section id="sectionPin">
+      <div class="pin-wrap">
+        <div class="scroll-wrap">
+          <div>
+            <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+            <h2 class="feature-title">Feature Title Here</h2>
+            <p class="content-text">The projects that shaped us and still speak for us</p>
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+            <h2 class="feature-title">Feature Title Here</h2>
+            <p class="content-text">The projects that shaped us and still speak for us</p>
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+            <h2 class="feature-title">Feature Title Here</h2>
+            <p class="content-text">The projects that shaped us and still speak for us</p>
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+            <h2 class="feature-title">Feature Title Here</h2>
+            <p class="content-text">The projects that shaped us and still speak for us</p>
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+            <h2 class="feature-title">Feature Title Here</h2>
+            <p class="content-text">The projects that shaped us and still speak for us</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="who-we-are" class="who-we-are-section">
+      
+      <div class="who-inner">
+        <h2 class="who-header">Who We Are</h2>
+        <h1 class="realx-text" style="color:#ff654f;">REAL <span style="color: #72adbb">X</span></h1>
+        <p class="realx-subtext text-1">More than 15 years of experience</p>
+        <p class="realx-subtext text-2">Harnessing innovative technology to build brand engagement</p>
+      </div>
+      
+    </section>
+
+    
+
+
+    <div class="grid-container">
+      <!-- Feature Article -->
+      <div class="feature-article">
+        <h2 class="feature-title">Some Title Here</h2>
+      </div>
+
+      <div class="feature-content">
+        <div class="feature-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+          <div class="feature-meta">
+            <div class="meta-item">
+              <span class="meta-label">Label</span>
+              <span class="meta-value">Some Value</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Label</span>
+              <span class="meta-value">Some Value</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Label</span>
+              <span class="meta-value">Some Value</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-content">
+          <h3 class="related-title">Some Title Here</h3>
+          <ul class="related-list">
+            <li class="related-item">
+              <a href="#" class="related-link">Some Link Here</a>
+            </li>
+            <li class="related-item">
+              <a href="#" class="related-link">Some Link Here</a>
+            </li>
+            <li class="related-item">
+              <a href="#" class="related-link">Some Link Here</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <div class="gallery">
+        <h3 class="gallery-title">Some Title Here</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/446d4ba4-e177-49dd-aaf9-4d7a2dbf0541.jpeg" alt="Nebula contemplation">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/5a47ce51-a2f9-443f-af27-0a5332aaa1e2.jpeg" alt="Observatory at night">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/028386a1-0da6-4759-86b5-8cd8cfad3f0f.jpeg" alt="Astronaut perspective">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://cdn.cosmos.so/78d49539-0853-4495-817b-1482fdfd83c7.jpeg" alt="Space station window">
+            <div class="image-caption">
+              <div class="caption-title">Some Title Here</div>
+              <div class="caption-desc">Description Area</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Content Blocks -->
+      <div class="additional-content">
+        <div class="content-block">
+          <h3 class="content-title">Some Title Here</h3>
+          <p class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+          <p class="content-text mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h3 class="content-title">Some Title Here</h3>
+          <p class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+          <p class="content-text mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/dist/gsap.min.js'></script>
+  <script src='https://unpkg.com/split-type'></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
