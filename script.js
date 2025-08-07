@@ -55,6 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTime = 0;
   let lastScrollTop = 0;
 
+  // Mouse icon click handler
+  const mouseIcon = document.querySelector('.mouse-icon');
+  mouseIcon.addEventListener('click', () => {
+    smoothScrollToContent();
+  });
+
+  // Hide mouse icon on scroll
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      mouseIcon.style.opacity = '0';
+    } else {
+      mouseIcon.style.opacity = '1';
+    }
+  });
+
   // Function to animate to content
   function smoothScrollToContent() {
     if (isScrolling) return;
@@ -395,7 +410,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let preloaderDone = false;
-
   // First animation after 1s
   setTimeout(() => {
     hero.style.clipPath = "polygon(0% 45%, 25% 45%, 25% 55%, 0% 55%)";
@@ -583,4 +597,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
+  
 })

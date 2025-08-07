@@ -342,6 +342,82 @@ p {
   transform: translateY(100%);
 }
 
+/* Mouse Icon Styles */
+.mouse-icon {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: difference;
+  opacity: 0.7;
+}
+
+.mouse {
+  width: 25px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wheel {
+  background: #fff;
+  width: 4px;
+  height: 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: mouse-wheel 2s ease infinite;
+}
+
+.mouse-arrow {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin-top: 8px;
+  animation: mouse-arrow 2s ease infinite;
+}
+
+@keyframes mouse-wheel {
+  0% {
+    top: 8px;
+    opacity: 1;
+  }
+  50% {
+    top: 25px;
+    opacity: 0;
+  }
+  100% {
+    top: 8px;
+    opacity: 1;
+  }
+}
+
+@keyframes mouse-arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+}
+
 .main-footer a {
   color: var(--color-text);
   text-decoration: none;
