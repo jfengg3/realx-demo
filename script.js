@@ -9,21 +9,44 @@ const lenis = new Lenis({
   smooth: true,
   smoothTouch: false,
   touchMultiplier: 2,
+  infinite: false
 });
 
-// Integrate Lenis with GSAP ScrollTrigger
-function raf(time) {
-  lenis.raf(time);
+// Track if we're in the hero-content transition
+let isInHeroTransition = false;
+
+// Stop Lenis scrolling during hero transitions
+lenis.on('scroll', ({ scroll }) => {
+  if (isInHeroTransition) {
+    lenis.stop();
+  }
+});
+
+function startRaf() {
+  // Integrate Lenis with GSAP ScrollTrigger
+  function raf(time) {
+    if (!isInHeroTransition) {
+      lenis.raf(time);
+    }
+    requestAnimationFrame(raf);
+  }
   requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);
 
-// Update ScrollTrigger on Lenis scroll
-lenis.on('scroll', ScrollTrigger.update);
+startRaf();
+
+// Update ScrollTrigger on Lenis scroll when not in transition
+lenis.on('scroll', (e) => {
+  if (!isInHeroTransition) {
+    ScrollTrigger.update();
+  }
+});
 
 // Set up GSAP ticker with Lenis
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
+  if (!isInHeroTransition) {
+    lenis.raf(time * 1000);
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,11 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function smoothScrollToContent() {
     if (isScrolling) return;
     isScrolling = true;
+    isInHeroTransition = true;
 
     // Create a timeline for smooth coordinated animations
     const tl = gsap.timeline({
-      onComplete: () => { isScrolling = false }
+      onComplete: () => { 
+        isScrolling = false;
+        isInHeroTransition = false;
+        lenis.start();
+      }
     });
+
+    // Stop Lenis scrolling during transition
+    lenis.stop();
 
     // Animate hero elements
     tl.to(header, {
@@ -80,10 +111,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function smoothScrollToHero() {
     if (isScrolling) return;
     isScrolling = true;
+    isInHeroTransition = true;
 
     const tl = gsap.timeline({
-      onComplete: () => { isScrolling = false }
+      onComplete: () => { 
+        isScrolling = false;
+        isInHeroTransition = false;
+        lenis.start();
+      }
     });
+
+    // Stop Lenis scrolling during transition
+    lenis.stop();
 
     tl.to(window, {
       duration: 1.2,
@@ -544,11 +583,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-
-  
-
-});
-
-gsap.set(window, { scrollTo: 0 });
-  
-
+})
